@@ -23,6 +23,9 @@ use App\Http\Controllers\CartController;
 |
 */
 
+Route::get('/', function () {
+    return view('welcome');
+});
 // Rute untuk admin
 Route::get('/admin-login', [AuthController::class, 'showAdminLoginForm'])->name('admin-login');
 Route::post('/admin-login', [AuthController::class, 'adminLogin']);
